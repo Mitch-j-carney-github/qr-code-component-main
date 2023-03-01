@@ -1,19 +1,44 @@
 $primary-color: hsl(0, 0%, 100%);
 $main-text-color: hsl(218, 44%, 22%);
-$text-color: hsl(212, 45%, 89%);
-$background-color: hsl(220, 15%, 55%);
+$background-color: hsl(212, 45%, 89%);
+$text-color: hsl(220, 15%, 55%);
 
 body {
 
     background: $background-color;
 }
 
+#qr-code {
+
+    grid-area: image;
+    object-fit: cover;
+}
+
 h1 {
 
     color: $main-text-color;
+    grid-area: header;
 }
 
 p {
 
     color: $text-color;
+    grid-area: info;
+}
+
+.box-container {
+
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+.box-1 {
+
+    display: grid;
+    background-color: $primary-color;
+    border-radius: 10px;
+    grid-template-areas: "image" "header" "info";
+    grid-template-rows: 540px 75px 100px;
+    grid-template-columns: 550px;
 }

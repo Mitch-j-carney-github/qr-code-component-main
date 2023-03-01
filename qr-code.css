@@ -1,11 +1,34 @@
 body {
-  background: hsl(220deg, 15%, 55%);
+  background: hsl(212deg, 45%, 89%);
+}
+
+#qr-code {
+  grid-area: image;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 h1 {
   color: hsl(218deg, 44%, 22%);
+  grid-area: header;
 }
 
 p {
-  color: hsl(212deg, 45%, 89%);
+  color: hsl(220deg, 15%, 55%);
+  grid-area: info;
+}
+
+.box-container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.box-1 {
+  display: grid;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 10px;
+  grid-template-areas: "image" "header" "info";
+  grid-template-rows: 540px 75px 100px;
+  grid-template-columns: 550px;
 }/*# sourceMappingURL=qr-code.css.map */
